@@ -1,0 +1,132 @@
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+main{
+    .video-container{
+        @include position(relative, 100%, 100%);
+        overflow: hidden;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .section-principal{
+        p {
+            color: $color-principal;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 20px 150px;
+            padding: 10px 50px;
+            text-align: center;
+        }
+    }
+
+    h1{
+        text-align: center;
+        color: $color-principal;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: -80px;
+        padding-top: 60px;
+    }
+
+    .section-cards{
+        @include flex;
+        min-height: 100vh;
+    }
+
+    .card{
+        @include position (relative, 300px, 350px);
+        background: transparent;
+        margin: 20px;
+        .face{
+            @include position (absolute, 100%, 100%);
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: .5s;
+        }
+        .front{
+            transform: perspective(600px) rotateX(0deg);
+            box-shadow: 0 5px 10px $color-shadow;
+            img{
+                @include position (absolute, 100%, 100%);
+                object-fit: cover;
+            }
+            h2{
+                @include position (absolute, 100%, 45px);
+                bottom: 0;
+                line-height: 45px;
+                color: $color-terciario;
+                background-color: $color-shadow;
+                text-align: center;
+            }
+        }
+        .back{
+            transform: perspective(600px) rotateY(180deg);
+            background: $color-principal;
+            padding: 15px;
+            color: $color-terciario;
+            @include direction;
+            justify-content: space-between;
+            text-align: center;
+            box-shadow: 0 5px 10px $color-shadow;
+            .link{
+                border-top: solid 1px $color-terciario;
+                height: 50px;
+                line-height: 50px;
+                a{
+                    color: $color-terciario;
+                }
+            }
+            h3{
+                font-size: 30px;
+                margin-top: 20px;
+                letter-spacing: 2px;
+            }
+            p{
+                letter-spacing: 1px;
+            }
+        }
+    }
+    .card:hover .front{
+        transform: perspective(600px) rotateY(180deg);
+    }
+
+    .card:hover .back{
+        transform: perspective(600px) rotateY(360deg); 
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 20px;
+            padding-top: 40px;
+        }
+        .section-principal p {
+            margin: 15px 30px;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 15px;
+            padding: 30px 5px 0;
+            margin-bottom: -50px;
+        }
+        .section-principal p {
+            margin: 10px 20px;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+        .section-cards {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+
+

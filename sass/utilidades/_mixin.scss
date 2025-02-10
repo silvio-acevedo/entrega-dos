@@ -1,0 +1,30 @@
+
+@mixin position($position, $width, $height) {
+    position: $position;
+    width: $width;
+    height: $height;
+  }
+
+@mixin flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin display($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin border{
+  border-radius: 10px;
+  border: 3px solid $color-secundario;
+}
+
+@mixin direction {
+  display: flex;
+  flex-direction: column;
+}
+

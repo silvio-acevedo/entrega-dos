@@ -1,0 +1,89 @@
+@import "../utilidades/mixin";
+
+/* COMIENZO DE NOSOTROS */
+.main-about{
+    width: 68%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.section-nos{
+    margin-bottom: 40px;
+    h1, h2{
+        font-size: 1.8rem;
+        color: $color-principal;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+
+.content-nos{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    img{
+        width: 50%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px $color-shadow;
+    }
+    p{
+        flex: 1;
+        font-size: 1em;
+        color: $color-principal;
+        text-align: justify;
+    }
+}
+
+@media (max-width:1024px){
+    .mian-about{
+        width: 80%;
+    }
+    h3{
+        font-size: 1.6rem;
+    }
+    .content-nos{
+        gap: 15px;
+        img{
+            max-width: 300px;
+        }
+        p{
+            font-size: 0.95em;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main-about{
+        width: 90%;
+    }
+    .content-nos{
+        flex-direction: column;
+        text-align: center;
+        img{
+            width: 80%;
+        }
+        p{
+            font-size: 0.9em;
+            text-align: justify;
+        }
+    }
+
+}
+
+@media (max-width: 480px){
+    h3{
+        font-size: 1.4em;
+    }
+    .content-nos{
+        img{
+            width: 100%;
+            max-width: none;
+        }
+        p{
+            font-size: 0.85em;
+        }
+    }
+}
