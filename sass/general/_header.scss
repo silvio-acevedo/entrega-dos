@@ -1,5 +1,13 @@
 @import "../utilidades/variables";
+@import "../utilidades/mixin";
 
+header{
+    nav{
+        .container-fluid{
+            margin: 0 20px;
+        }
+    }
+}
 .logo {
     margin: 0.5rem 0;
     width: 50px;
@@ -18,7 +26,6 @@
         color: $color-secundario;
     }
 }
-
 
 @media (min-width: 768px) {
     .logo {

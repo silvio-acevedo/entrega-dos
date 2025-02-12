@@ -1,11 +1,11 @@
 @import "../utilidades/mixin";
 
-/* COMIENZA CERVEAZAS */
+/* COMIENZA CERVEZAS */
 
 main{
-        h1{
-            margin-bottom: 10px;
-            font-size: 24px;
+    h1{
+        margin-bottom: 50px;
+        font-size: 24px;
     }
     .main-beer{
         @include display (flex, center, center);
@@ -44,8 +44,13 @@ main{
         color: $color-principal;
     }
     .text-beer-dos{
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 900;
+        color: $color-principal;
+    }
+    .caracteristicas{
+        font-size: 16px;
+        font-weight: 400;
         color: $color-principal;
     }
 }
@@ -56,18 +61,12 @@ main{
         width: 80vw;
         padding: 30px;
         img{
-            width: 50%;
+            width: 60%;
             height: auto;
-            margin-left: 0;
-            margin-right: 0;
-            margin-bottom: 20px;
+            margin:0 auto 20px;
         }
         .text-beer{
             font-size: 20px;
-            text-align: center;
-        }
-        .text-beer-dos{
-            text-align: center;
         }
     }
 }
@@ -77,11 +76,30 @@ main{
         width: 90vw;
         padding: 20px;
         img{
-            width: 70%;
+            width: 80%;
             height: auto;
         }
         .card-beer{
             font-size: 18px;
+        }
+        .text-beer-dos{
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .card-beer{
+        width: 95vw;
+        padding: 15px;
+        border-radius: 15px;
+        img{
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .text-beer{
+            font-size: 16px;
         }
         .text-beer-dos{
             font-size: 12px;

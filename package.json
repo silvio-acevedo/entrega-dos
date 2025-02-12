@@ -15,5 +15,9 @@
     "url": "https://github.com/silvio-acevedo/entrega-dos/issues"
   },
   "homepage": "https://github.com/silvio-acevedo/entrega-dos#readme",
+  "dependencies": {
+    "hamburgers": "^1.2.1"
+  },
+  "devDependencies": {},
   "description": ""
 }
